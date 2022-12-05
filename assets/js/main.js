@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
 
   $('.header-navbar__hamburger').on('click', function () {

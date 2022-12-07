@@ -6,11 +6,9 @@
   align-items: center;
   justify-content: center;
 
-  min-width: 250px;
-  min-height: 60px;
+  border-width: 2px;
+  border-style: solid;
 
-  background-color: rgba($color-white, 0.1);
-  border: 2px solid $color-white;
   padding: 0.5em 1em;
 
   font-size: 1.125rem;
@@ -23,6 +21,20 @@
   }
 
   &--light {
-
+    background-color: rgba($color-white, 0.1);
+    border-color: $color-white;
+    min-width: 250px;
+    min-height: 60px;
   }
+
+  &--primary {
+    background-color: rgba($color-primary, 0.8);
+    border-color: $color-primary;
+    min-width: 350px;
+    min-height: 60px;
+  }
+}
+
+.visually-hidden {
+  @include visually-hidden;
 }

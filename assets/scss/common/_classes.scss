@@ -6,32 +6,52 @@
   align-items: center;
   justify-content: center;
 
-  border-width: 2px;
-  border-style: solid;
-
   padding: 0.5em 1em;
 
-  font-size: 1.125rem;
+  transition: background-color 0.25s;
   letter-spacing: 0.1em;
 
-  transition: background-color 0.25s;
+  border-width: 2px;
+  border-style: solid;
 
   &:hover {
     background-color: $color-accent;
   }
 
   &--light {
-    background-color: rgba($color-white, 0.1);
     border-color: $color-white;
-    min-width: 250px;
-    min-height: 60px;
+    background-color: rgba($color-white, 0.1);
+
+    @include lg-min {
+      min-width: 250px;
+      min-height: 60px;
+
+      font-size: 1.125rem;
+    }
+    @include lg-md {
+      min-width: 200px;
+      min-height: 50px;
+    }
+    @include md {
+      min-width: 170px;
+      min-height: 40px;
+    }
   }
 
   &--primary {
-    background-color: rgba($color-primary, 0.8);
-    border-color: $color-primary;
-    min-width: 350px;
     min-height: 60px;
+
+    border-color: $color-primary;
+    background-color: rgba($color-primary, 0.8);
+
+    font-size: 1.125rem;
+
+    @include sm-min {
+      min-width: 350px;
+    }
+    @include sm {
+      min-width: 100%;
+    }
   }
 }
 
